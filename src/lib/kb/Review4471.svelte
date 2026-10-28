@@ -12,7 +12,7 @@
     <tbody>{#each groups as g}<tr><td>{g.label}</td><td>{g.count}</td><td>{g.tenants}</td><td>{g.first} → {g.last}</td></tr>{/each}</tbody>
     <tfoot><tr><th>Total, disjoint groups</th><td>{groups.reduce((n,g)=>n+g.count,0)}</td><td colspan="2">{unplaced.length} unplaced</td></tr></tfoot>
   </table>
-  <p>The old classifier yields {originalCounts.map(g=>`${g.cause}: ${g.count} (${g.exceptions} exceptions included)`).join('; ')}. The review separates the exceptions before applying that classifier.</p>
+  <p>The export classifier yields {originalCounts.map(g=>`${g.cause}: ${g.count} (${g.exceptions} flagged cases included)`).join('; ')}. The table above shows disjoint work queues after holding flagged cases out for investigation, not a claim that they establish another shared cause.</p>
 {:else if section === 'exceptions'}
   <p>Keep these cases visible and separate from the parser fix. They are one investigation queue; a common root cause is unverified.</p>
   {#each exceptions as r}

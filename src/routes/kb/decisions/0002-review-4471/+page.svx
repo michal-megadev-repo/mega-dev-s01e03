@@ -34,10 +34,10 @@ The [course's engineering update](https://hq.mega.dev/challenges/what-it-shows#e
 
 > #4471 · closed 05 oct
 
-- Parser: **FIXED** — “fix(dates): parse dd/mm for eu locales”. Close issue 1 as **completed**, based on this reported fix.
-- Hint: **WON'T FIX** — “booking-v3 form retired”. Close issue 2 as **not planned**, because the affected form was retired rather than repaired.
+- Parser: **FIXED** — “fix(dates): parse dd/mm for eu locales”. Issue 1 is closed as **completed**, based on this reported fix.
+- Hint: **WON'T FIX** — “booking-v3 form retired”. Issue 2 is closed as **not planned**, because the affected form was retired rather than repaired.
 
-The page gives “05 oct” without a year, time or timezone; preserve that original notation. This is a report from the course's engineering update, not an independently executed production test. Closing the parent ticket does not explain the five body-level exceptions or prove they were addressed by the parser fix. Keep issue 3 open for further evidence.
+The page gives “05 oct” without a year, time or timezone; preserve that original notation. This is a report from the course's engineering update, not an independently executed production test. Closing the parent ticket does not explain the body-level exceptions or prove they were addressed by the parser fix. Keep issue 3 open for further evidence.
 
 ### Shared month-first parser
 
@@ -76,10 +76,10 @@ The distinction between receivedAt and mergedAt matters: delayed bulk merging ca
 3. Merge only when evidence supports the same mechanism. Different subjects may describe one cause; identical subjects may hide different causes.
 4. Hold unknown tenants and unexplained symptoms for investigation. A classifier that cannot see a symptom cannot disprove it. Do not default to merge when uncertain.
 5. Assign an owner and a next review to every unresolved group. Recheck new reports and update counts from data; a queue marker is not proof of a fix.
-6. Verify each fix against its own reports before closing its issue. Keep the separate GitHub issues linked to this review and update them when evidence changes.
+6. Record the basis of each closure: independent verification, an attributed engineering fix, or retirement of the affected feature. Verify a fix against its reports before claiming independent resolution. Keep unexplained cases visible and update the linked issues when evidence changes.
 
 <Callout>
-This is a proposed triage decision and a review of a dated export, with the later engineering disposition attributed separately. Policy adoption and independent production verification remain unverified. The five exceptional reports are still unresolved.
+This is a proposed triage decision and a review of a dated export, with the later engineering disposition attributed separately. Policy adoption and independent production verification remain unverified. The exceptional reports are still unresolved.
 </Callout>
 
 ## Evidence and time basis

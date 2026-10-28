@@ -13,7 +13,7 @@ reviewed: '2026-10-28'
 </script>
 
 <Callout>
-Review notice: the course's later engineering update marks this parent ticket closed: parser fixed, booking-v3 hint not fixed because the form was retired. The historical one-issue claim below is contradicted by the export's data and body-level exceptions. See the <a href="/kb/decisions/0002-review-4471">signed review, disposition and separate work items</a>. The five exceptional reports remain unresolved.
+Review notice: the course's later engineering update marks this parent ticket closed: parser fixed, booking-v3 hint not fixed because the form was retired. The historical one-issue claim below is contradicted by the export's data and body-level exceptions. See the <a href="/kb/decisions/0002-review-4471">signed review, disposition and separate work items</a>. The exceptional reports remain unresolved.
 </Callout>
 
 Since April, people have told us their bookings land on the wrong day: a month flipped. By

@@ -7,7 +7,7 @@ import { tenantOf } from '#lib/kb/locales';
 export const REVIEW_GROUPS = ['parser', 'hint', 'unresolved'] as const;
 export type ReviewGroup = (typeof REVIEW_GROUPS)[number];
 export const labels: Record<ReviewGroup, string> = {
-  parser: 'Month-first shared parser',
+  parser: 'Shared parser — excluding the investigation queue',
   hint: 'booking-v3 date hint contradicts locale parsing',
   unresolved: 'Unresolved one-day / chronology symptoms',
 };
