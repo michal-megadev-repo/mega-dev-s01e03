@@ -46,6 +46,8 @@ The last group is an investigation queue, not a proven shared root cause. Counts
 computed from the exported source data. Report IDs are listed in the separate issues.
 
 - Source page: [0002 review](src/routes/kb/decisions/0002-review-4471/+page.svx)
+- Standalone plain HTML: [index.html](index.html) — download and open directly;
+  all styles and the chart are embedded, with no JavaScript or server required.
 - Rendered page: [HTML](dist/kb/decisions/0002-review-4471/index.html)
 - Render evidence: [manifest](render-manifest.json)
 - Visual copy: [full-page screenshot](rendered/review-4471.jpg)
