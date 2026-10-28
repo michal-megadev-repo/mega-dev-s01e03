@@ -1,5 +1,5 @@
 {
-  "renderedAt": "2026-10-28T05:53:53.810Z",
+  "renderedAt": "2026-10-28T06:01:39.448Z",
   "pages": [
     {
       "route": "/kb",
@@ -19,8 +19,8 @@
       "route": "/kb/decisions/0002-review-4471",
       "output": "dist\\kb\\decisions\\0002-review-4471\\index.html",
       "title": "0002 · Split #4471 by evidence before merging",
-      "signature": "Codex · S01E03 review for Michał Traczyk · 2026-10-28",
-      "deskRef": "DR-CR4D-GQPJ"
+      "signature": "michal-megadev-repo",
+      "deskRef": "DR-4Q6G-3H30"
     },
     {
       "route": "/kb/incidents/4471",

@@ -1,10 +1,10 @@
 ---
 layout: runbook
 title: '0002 · Split #4471 by evidence before merging'
-owner: support desk
+owner: michal-megadev-repo
 status: proposed
 reviewed: '2026-10-28'
-signature: 'Codex · S01E03 review for Michał Traczyk · 2026-10-28'
+signature: 'michal-megadev-repo'
 ---
 
 <script>
