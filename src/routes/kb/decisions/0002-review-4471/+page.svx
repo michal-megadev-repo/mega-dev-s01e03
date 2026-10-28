@@ -20,13 +20,24 @@ Proposed replacement for [decision 0001](/kb/decisions/0001-dedupe-by-subject) a
 
 The [original incident page](/kb/incidents/4471) calls this one known issue with one fix queued. Its own rendered components contradict that account. A ticket marked known and a count of merged reports do not establish a shared cause or a resolution.
 
-This review uses the export dated 4 October 2026. It does not claim to observe the live desk after that export. Report totals are computed from the exported data, not typed into this page.
+Report counts and symptoms use the export dated 4 October 2026. A later engineering update from the course page is recorded separately below. Report totals are computed from the exported data, not typed into this page.
 
 ## Separate the work
 
 <Review4471 />
 
-GitHub work items: [shared parser, issue 1](https://github.com/michal-megadev-repo/mega-dev-s01e03/issues/1), [form hint, issue 2](https://github.com/michal-megadev-repo/mega-dev-s01e03/issues/2), and [unresolved symptoms, issue 3](https://github.com/michal-megadev-repo/mega-dev-s01e03/issues/3). These remain open because this review establishes the work, not production fixes.
+GitHub work items: [shared parser, issue 1](https://github.com/michal-megadev-repo/mega-dev-s01e03/issues/1), [form hint, issue 2](https://github.com/michal-megadev-repo/mega-dev-s01e03/issues/2), and [unresolved symptoms, issue 3](https://github.com/michal-megadev-repo/mega-dev-s01e03/issues/3). The engineering update determines the first two issues' closure reasons; the unresolved investigation remains separate.
+
+## Engineering disposition
+
+The [course's engineering update](https://hq.mega.dev/challenges/what-it-shows#engineering-update), checked during this review, states:
+
+> #4471 · closed 05 oct
+
+- Parser: **FIXED** — “fix(dates): parse dd/mm for eu locales”. Close issue 1 as **completed**, based on this reported fix.
+- Hint: **WON'T FIX** — “booking-v3 form retired”. Close issue 2 as **not planned**, because the affected form was retired rather than repaired.
+
+The page gives “05 oct” without a year, time or timezone; preserve that original notation. This is a report from the course's engineering update, not an independently executed production test. Closing the parent ticket does not explain the five body-level exceptions or prove they were addressed by the parser fix. Keep issue 3 open for further evidence.
 
 ### Shared month-first parser
 
@@ -68,12 +79,12 @@ The distinction between receivedAt and mergedAt matters: delayed bulk merging ca
 6. Verify each fix against its own reports before closing its issue. Keep the separate GitHub issues linked to this review and update them when evidence changes.
 
 <Callout>
-This is a proposed review of a dated export, with separate public issues. Operational adoption and production fixes remain unverified. The live desk may have changed.
+This is a proposed triage decision and a review of a dated export, with the later engineering disposition attributed separately. Policy adoption and independent production verification remain unverified. The five exceptional reports are still unresolved.
 </Callout>
 
 ## Evidence and time basis
 
-Sources: src/lib/data/reports-4471.json (report ID, body, receivedAt, mergedAt); src/lib/data/tenants/*.json (tenant locale and form); src/lib/data/desk-notes.json (exception IDs); src/lib/kb/causes.ts (current classification and deduplication); CauseTable.svelte and QueueTimeline.svelte (rendered counts and history); the incident page, triage page and decision 0001 (claims being reviewed).
+Sources: src/lib/data/reports-4471.json (report ID, body, receivedAt, mergedAt); src/lib/data/tenants/*.json (tenant locale and form); src/lib/data/desk-notes.json (exception IDs); src/lib/kb/causes.ts (current classification and deduplication); CauseTable.svelte and QueueTimeline.svelte (rendered counts and history); the incident page, triage page and decision 0001 (claims being reviewed); the later course-page engineering update (reported disposition, separate from the export).
 
 Original timestamps retain their explicit offsets. Calendar-date grouping uses the date written in each timestamp, matching the exported timeline. We do not reinterpret those offsets as Europe/Warsaw. Quoted booking dates and weekdays are statements from report bodies, with no additional timezone inferred. The reviewed date is the date of this review, not the last observed desk event.
 

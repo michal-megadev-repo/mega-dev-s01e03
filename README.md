@@ -57,6 +57,12 @@ The new decision is a proposal replacing subject-only deduplication. The accepte
 historical decision remains unchanged. Original event offsets are preserved; received
 and merged timestamps are not interpreted as booking-event times.
 
+A later [course engineering update](https://hq.mega.dev/challenges/what-it-shows#engineering-update)
+marks #4471 closed on “05 oct”: parser fixed; hint won't fix because booking-v3 was
+retired. Issue 1 is completed and issue 2 is not planned on that evidence. Issue 3
+retains the five unresolved exceptions; the update does not explain them. No year,
+time or timezone is added to the engineering update's date.
+
 ### View the actual page
 
 Use Node.js 22 or newer. Dependencies install locally; lifecycle scripts stay disabled
