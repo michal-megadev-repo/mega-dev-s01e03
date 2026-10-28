@@ -1,5 +1,22 @@
 # kb — the support knowledge base
 
+## Support desk page — S01E03
+
+**The page for the support desk is [index.html](index.html), in the root of this repository.**
+It is the rendered review of ticket #4471, with the separate problems, report counts,
+engineering dispositions, sources and signature. Download this single HTML file and
+open it in a browser to read the page; GitHub's file viewer displays its source code.
+
+| Artifact | Exact location in this repository |
+| --- | --- |
+| Support desk page — standalone HTML | [index.html](index.html) |
+| Signed KB source — `.svx` | [src/routes/kb/decisions/0002-review-4471/+page.svx](src/routes/kb/decisions/0002-review-4471/+page.svx) |
+| Rendered page at its KB route | [dist/kb/decisions/0002-review-4471/index.html](dist/kb/decisions/0002-review-4471/index.html) |
+| Full-page visual copy | [rendered/review-4471.jpg](rendered/review-4471.jpg) |
+
+Page title: **0002 · Split #4471 by evidence before merging**. Owner and signature:
+**michal-megadev-repo**.
+
 **kb** = knowledge base. What the support desk knows about how our products break, written
 down where the code can keep it honest.
 
