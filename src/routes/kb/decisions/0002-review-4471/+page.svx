@@ -1,10 +1,10 @@
 ---
 layout: runbook
 title: '0002 · Split #4471 by evidence before merging'
-owner: michal-megadev-repo
+owner: 'Michał Traczyk'
 status: proposed
 reviewed: '2026-10-28'
-signature: 'michal-megadev-repo'
+signature: 'Michał Traczyk'
 ---
 
 <script>

@@ -11,7 +11,7 @@ The page reviews the separate problems and unresolved reports merged into ticket
 | Signed KB source | [src/routes/kb/decisions/0002-review-4471/+page.svx](src/routes/kb/decisions/0002-review-4471/+page.svx) |
 
 Page title: **0002 · Split #4471 by evidence before merging**.
-Owner and signature: **michal-megadev-repo**. Rendered desk ref: **DR-4Q6G-3H30**.
+Owner and signature: **Michał Traczyk**. Rendered desk ref: **DR-QRBD-1DWV**.
 
 `index.html` is a standalone page with embedded styles and chart. Use the live
 link above, or download the HTML and open it in a browser. GitHub's file viewer
