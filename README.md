@@ -2,6 +2,8 @@
 
 ## Support desk page — S01E03
 
+**Live support desk page: [read the page on GitHub Pages](https://michal-megadev-repo.github.io/mega-dev-s01e03/).**
+
 **The page for the support desk is [index.html](index.html), in the root of this repository.**
 It is the rendered review of ticket #4471, with the separate problems, report counts,
 engineering dispositions, sources and signature. Download this single HTML file and

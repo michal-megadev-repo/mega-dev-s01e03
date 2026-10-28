@@ -2,6 +2,9 @@
 
 ## Support desk page — S01E03
 
+Live support desk page:
+[https://michal-megadev-repo.github.io/mega-dev-s01e03/](https://michal-megadev-repo.github.io/mega-dev-s01e03/).
+
 The support desk page is **`index.html` in the repository root**:
 [open the HTML file](index.html).
 
