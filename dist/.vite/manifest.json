@@ -1,8 +1,0 @@
-{
-  "tooling/entry-client.js": {
-    "file": "assets/entry-client-DCZ3G6xF.js",
-    "name": "entry-client",
-    "src": "tooling/entry-client.js",
-    "isEntry": true
-  }
-}
