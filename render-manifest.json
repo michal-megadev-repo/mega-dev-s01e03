@@ -1,0 +1,40 @@
+{
+  "renderedAt": "2026-10-28T05:49:09.264Z",
+  "pages": [
+    {
+      "route": "/kb",
+      "output": "dist\\kb\\index.html",
+      "title": "Support knowledge base",
+      "signature": null,
+      "deskRef": null
+    },
+    {
+      "route": "/kb/decisions/0001-dedupe-by-subject",
+      "output": "dist\\kb\\decisions\\0001-dedupe-by-subject\\index.html",
+      "title": "0001 · Duplicates share a subject line",
+      "signature": null,
+      "deskRef": null
+    },
+    {
+      "route": "/kb/decisions/0002-review-4471",
+      "output": "dist\\kb\\decisions\\0002-review-4471\\index.html",
+      "title": "0002 · Split #4471 by evidence before merging",
+      "signature": "Codex · S01E03 review for Michał Traczyk · 2026-10-28",
+      "deskRef": "DR-CR4D-GQPJ"
+    },
+    {
+      "route": "/kb/incidents/4471",
+      "output": "dist\\kb\\incidents\\4471\\index.html",
+      "title": "#4471 · dates parse mm/dd in eu locales",
+      "signature": null,
+      "deskRef": null
+    },
+    {
+      "route": "/kb/triage/dedupe",
+      "output": "dist\\kb\\triage\\dedupe\\index.html",
+      "title": "Triage: duplicate reports",
+      "signature": null,
+      "deskRef": null
+    }
+  ]
+}
