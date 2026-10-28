@@ -4,7 +4,7 @@ title: '0002 · Split #4471 by evidence before merging'
 owner: 'Michał Traczyk'
 status: proposed
 reviewed: '2026-10-28'
-signature: 'Michał Traczyk'
+signature: "v1.eyJzdG9yeSI6Im9mZiIsInN1YiI6IjMyOCIsImF1ZCI6ImNoYWxsZW5nZTp3aGF0LWl0LXNob3dzIiwiaWF0IjoxNzkzMTczOTk5LCJleHAiOjE3OTMyNjAzOTl9.NXxLmh7pHWER37lODfrvEXEkqrpYE9dX2o9JUPdeOVo"
 ---
 
 <script>

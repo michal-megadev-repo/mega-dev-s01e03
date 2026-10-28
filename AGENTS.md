@@ -7,7 +7,7 @@
 - Signed source: **[src/routes/kb/decisions/0002-review-4471/+page.svx](src/routes/kb/decisions/0002-review-4471/+page.svx)**.
 
 Title: `0002 · Split #4471 by evidence before merging`.
-Owner/signature: `Michał Traczyk`. Rendered desk ref: `DR-QRBD-1DWV`.
+Owner: `Michał Traczyk`. The source signature is the course-issued challenge ticket. Rendered desk ref: `DR-NZVH-0ZRV`.
 
 The HTML contains the rendered component output, styles and chart. Read it in a
 browser; the GitHub blob view displays code.
