@@ -1,0 +1,91 @@
+---
+layout: runbook
+title: '0002 · Split #4471 by evidence before merging'
+owner: michal-megadev-repo
+status: proposed
+reviewed: '2026-10-28'
+signature: 'michal-megadev-repo'
+---
+
+<script>
+  import Review4471 from '#lib/kb/Review4471.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  import Callout from '#lib/kb/Callout.svelte';
+</script>
+
+## Decision and scope
+
+Proposed replacement for [decision 0001](/kb/decisions/0001-dedupe-by-subject) and the subject-only rule in [triage](/kb/triage/dedupe). Keep the accepted historical decision intact. The support desk must adopt this proposal before it becomes policy.
+
+The [original incident page](/kb/incidents/4471) calls this one known issue with one fix queued. Its own rendered components contradict that account. A ticket marked known and a count of merged reports do not establish a shared cause or a resolution.
+
+Report counts and symptoms use the export dated 4 October 2026. A later engineering update from the course page is recorded separately below. Report totals are computed from the exported data, not typed into this page.
+
+## Separate the work
+
+<Review4471 />
+
+GitHub work items: [shared parser, issue 1](https://github.com/michal-megadev-repo/mega-dev-s01e03/issues/1), [form hint, issue 2](https://github.com/michal-megadev-repo/mega-dev-s01e03/issues/2), and [unresolved symptoms, issue 3](https://github.com/michal-megadev-repo/mega-dev-s01e03/issues/3). The engineering update determines the first two issues' closure reasons; the unresolved investigation remains separate.
+
+## Engineering disposition
+
+The [course's engineering update](https://hq.mega.dev/challenges/what-it-shows#engineering-update), checked during this review, states:
+
+> #4471 · closed 05 oct
+
+- Parser: **FIXED** — “fix(dates): parse dd/mm for eu locales”. Issue 1 is closed as **completed**, based on this reported fix.
+- Hint: **WON'T FIX** — “booking-v3 form retired”. Issue 2 is closed as **not planned**, because the affected form was retired rather than repaired.
+
+The page gives “05 oct” without a year, time or timezone; preserve that original notation. This is a report from the course's engineering update, not an independently executed production test. Closing the parent ticket does not explain the body-level exceptions or prove they were addressed by the parser fix. Keep issue 3 open for further evidence.
+
+### Shared month-first parser
+
+The shared parser reads dates month first. Day-first tenant inputs can therefore exchange day and month. Apply the tenant directory and channel, not the reporter's browser locale or intake guess. A booking-v3 tenant's app or email report still follows this route.
+
+For example, R-41205 says: “Customer booked 3 October and got an invite for 10 March. Please look at this.” Its browser is en-US and intake guessed hint; its tenant morrow.tax is fr-FR on booking-v2. Those intake fields do not establish the cause.
+
+Fix direction: preserve the tenant's declared date semantics through shared parsing, or use an explicit unambiguous representation between systems. Verify dates with both fields at most twelve and dates with a day above twelve, through app, email and booking-v2. The export describes the mechanism; it does not include production parser code or a verified production fix.
+
+### booking-v3 hint and parsing disagree
+
+The form prints MM/DD/YYYY while parsing in the day-first tenant's format. Following the hint gives the wrong date. Only form-channel reports on booking-v3 match this mechanism. Align the hint, validation and parsing with the same tenant locale. Test form submissions separately from the shared parser path.
+
+R-41241, alder.physio on booking-v3, reports: “We had two people show up on 8 June. They were booked for 6 August.” Its form channel and tenant configuration, together with causes.ts, distinguish the route. A matching subject would not.
+
+### Unresolved one-day and chronology symptoms
+
+The desk singled out the following cases in desk-notes.json. The existing classifier ignores the body and files them under parser. Their symptoms do not demonstrate a month/day exchange. Preserve the uncertainty rather than silently counting them toward the parser fix.
+
+<Review4471 section="exceptions" />
+
+One report compares Lisbon and Toronto, so timezone conversion is a hypothesis worth investigating. June-only movement, an invite reportedly arriving before booking, and a one-day change may require different explanations. Do not assert that they share a timezone bug. Obtain booking creation, stored instant/date, invite generation, recipient timezone and calendar rendering evidence for each case. Split this investigation further when evidence supports distinct causes.
+
+## What the queue shows
+
+<QueueTimeline ticket={4471} />
+
+<Review4471 section="queue" />
+
+The distinction between receivedAt and mergedAt matters: delayed bulk merging can conceal a long-running report stream. Use receipt dates to track occurrence reports and merge dates to audit desk processing. Neither field is the date of the reported booking event. The original prose's “Since April” is incomplete without checking this rendered history.
+
+## Triage from now on
+
+1. Deduplicate export rows by report ID. Keep provenance and do not count page overlap as new demand.
+2. Read the body. Look up tenant locale and form version, and record the channel, intended date and observed date. Treat subject, browser locale and intakeTag as search clues.
+3. Merge only when evidence supports the same mechanism. Different subjects may describe one cause; identical subjects may hide different causes.
+4. Hold unknown tenants and unexplained symptoms for investigation. A classifier that cannot see a symptom cannot disprove it. Do not default to merge when uncertain.
+5. Assign an owner and a next review to every unresolved group. Recheck new reports and update counts from data; a queue marker is not proof of a fix.
+6. Record the basis of each closure: independent verification, an attributed engineering fix, or retirement of the affected feature. Verify a fix against its reports before claiming independent resolution. Keep unexplained cases visible and update the linked issues when evidence changes.
+
+<Callout>
+This is a proposed triage decision and a review of a dated export, with the later engineering disposition attributed separately. Policy adoption and independent production verification remain unverified. The exceptional reports are still unresolved.
+</Callout>
+
+## Evidence and time basis
+
+Sources: src/lib/data/reports-4471.json (report ID, body, receivedAt, mergedAt); src/lib/data/tenants/*.json (tenant locale and form); src/lib/data/desk-notes.json (exception IDs); src/lib/kb/causes.ts (current classification and deduplication); CauseTable.svelte and QueueTimeline.svelte (rendered counts and history); the incident page, triage page and decision 0001 (claims being reviewed); the later course-page engineering update (reported disposition, separate from the export).
+
+Original timestamps retain their explicit offsets. Calendar-date grouping uses the date written in each timestamp, matching the exported timeline. We do not reinterpret those offsets as Europe/Warsaw. Quoted booking dates and weekdays are statements from report bodies, with no additional timezone inferred. The reviewed date is the date of this review, not the last observed desk event.
+
+<RenderStamp {signature} />
